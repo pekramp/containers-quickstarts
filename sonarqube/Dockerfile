@@ -1,4 +1,4 @@
-FROM docker.io/sonarqube:latest
+FROM docker.artifactory.apps.mgt.devsecops.gov/sonarqube:latest
 
 USER root
 ARG sonar_plugins="pmd ldap"

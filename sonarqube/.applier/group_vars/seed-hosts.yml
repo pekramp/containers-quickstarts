@@ -3,7 +3,7 @@ app_name: sonarqube
 
 build:
   NAME: "{{ app_name }}"
-  SOURCE_REPOSITORY_URL: https://github.com/redhat-cop/containers-quickstarts.git
+  SOURCE_REPOSITORY_URL: https://github.com/pekramp/containers-quickstarts.git
   SOURCE_REPOSITORY_REF: master
   SOURCE_CONTEXT_DIR: "{{ app_name }}"
 postgresql:
@@ -19,7 +19,7 @@ openshift_cluster_content:
 - object: Environment Setup
   content:
   - name: Create Projects
-    template: "https://raw.githubusercontent.com/redhat-cop/cluster-lifecycle/v3.9.0/files/projectrequest/template.yml"
+    template: "https://raw.githubusercontent.com/pekramp/cluster-lifecycle/v3.10.0/files/projectrequest/template.yml"
     action: create
     params_from_vars:
       NAMESPACE: "{{ namespace }}"
